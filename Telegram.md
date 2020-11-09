@@ -1,0 +1,6 @@
+```
+ sudo apt install telegram-desktop
+
+telegram-desktop
+```
+
