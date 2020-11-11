@@ -24,6 +24,11 @@ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 
 sudo apt install nodejs
 
+#换源
+npm config set registry https://registry.npm.taobao.org
+
+npm config get registry
+
 ```
 
 ## Telegram
@@ -105,5 +110,39 @@ http://clash.razord.top/
 
 ```
 sudo apt install gnome-sushi
+```
+
+## Touchpad
+
+```
+https://github.com/iberianpig/fusuma
+
+#将用户添加到input组
+sudo gpasswd -a $USER input
+
+#应用
+newgrp input
+
+#安装libinput-tools
+sudo apt-get install libinput-tools
+
+#安装ruby
+sudo apt-get install ruby
+
+#安装Fusuma
+sudo gem install fusuma
+
+#安装xdotool
+sudo apt-get install xdotool
+
+#通过运行以下命令，确保将触摸板事件发送到GNOME桌面
+gsettings set org.gnome.desktop.peripherals.touchpad send-events enabled
+
+#启动Fusuma
+fusuma
+
+#更新
+sudo gem update fusuma
+
 ```
 
