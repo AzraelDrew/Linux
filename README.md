@@ -165,3 +165,18 @@ wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add
 
 ```
 
+## SMB
+
+```
+#安装smb服务
+sudo apt-get install smb*
+
+#创建一个smb账号
+sudo smbpasswd -a  ubuntu账号名称
+New SMB password:			#输入账号密码
+Retype new SMB password:	#再次输入账号密码
+
+#查看当前系统中的共享文件夹列表
+smbclient -L //localhost/share
+```
+
