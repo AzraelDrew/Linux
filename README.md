@@ -117,6 +117,9 @@ sudo apt install gnome-sushi
 ```
 https://github.com/iberianpig/fusuma
 
+#配置文件在 .config/fusuma/config.yaml
+
+
 #将用户添加到input组
 sudo gpasswd -a $USER input
 
@@ -179,4 +182,12 @@ Retype new SMB password:	#再次输入账号密码
 #查看当前系统中的共享文件夹列表
 smbclient -L //localhost/share
 ```
+
+## Skype
+
+```
+Google
+```
+
+
 
