@@ -166,6 +166,12 @@ sudo apt install vlc
 ```
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 
+sudo apt install subliem-text
+#以管理员启动Sublime Text
+ln -s /opt/sublime_text/sublime_text /usr/local/bin/subl
+
+#使用Sublime Text打开文件
+sudo subl <filename>
 ```
 
 ## SMB
