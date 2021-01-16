@@ -197,3 +197,17 @@ Google
 
 
 
+## ubuntu 删除开机启动
+
+```
+sudo  update-rc.d  apache2 remove 
+```
+
+
+
+### 查看CPU频率
+
+```
+watch grep \"cpu MHz\" /proc/cpuinfo
+```
+
