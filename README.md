@@ -197,6 +197,16 @@ Google
 
 
 
+## ZOOM
+
+```
+wget -O ./zoom.deb https://zoom.us/client/latest/zoom_amd64.deb
+```
+
+
+
+
+
 ## ubuntu 删除开机启动
 
 ```
@@ -222,8 +232,6 @@ dpkg -i packagename
 #卸载软件
 dpkg -P packagename
 ```
-
-
 
 
 
