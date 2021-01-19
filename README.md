@@ -211,3 +211,48 @@ sudo  update-rc.d  apache2 remove
 watch grep \"cpu MHz\" /proc/cpuinfo
 ```
 
+
+
+## dkpg
+
+```
+#安装软件
+dpkg -i packagename
+
+#卸载软件
+dpkg -P packagename
+```
+
+
+
+
+
+## apt
+
+```
+#安装
+apt install packagename
+
+#删除
+apt-get purge / apt-get --purge remove  #删除已安装包（不保留配置文件)
+
+apt-get autoremove
+删除为了满足依赖而安装的，但现在不再需要的软件包（包括已安装包），保留配置文件
+
+apt-get remove
+删除已安装的软件包（保留配置文件），不会删除依赖软件包，且保留配置文件
+
+apt-get autoclean
+APT的底层包是dpkg, 而dpkg 安装Package时, 会将 *.deb 放在 /var/cache/apt/archives/中，apt-get autoclean 只会删除 /var/cache/apt/archives/ 已经过期的deb
+
+apt-get clean
+使用 apt-get clean 会将 /var/cache/apt/archives/ 的 所有 deb 删掉，可以理解为 rm /var/cache/apt/archives/*.deb
+
+# 删除软件及其配置文件
+apt-get --purge remove <package>
+# 删除没用的依赖包
+apt-get autoremove <package>
+# 此时dpkg的列表中有“rc”状态的软件包，可以执行如下命令做最后清理：
+dpkg -l |grep ^rc|awk '{print $2}' |sudo xargs dpkg -P
+```
+
