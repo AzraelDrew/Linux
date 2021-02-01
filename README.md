@@ -264,3 +264,46 @@ apt-get autoremove <package>
 dpkg -l |grep ^rc|awk '{print $2}' |sudo xargs dpkg -P
 ```
 
+
+
+# 关闭笔记本盖子不采取任何操作
+
+```
+#编辑配置文件
+sudo vim  /etc/systemd/logind.conf
+
+#将其中的:
+#HandleLidSwitch=suspend
+
+#改为：
+HandleLidSwitch=ignore
+
+#保存退出
+
+重启
+```
+
+
+
+## Grub
+
+```
+#下载主题
+https://www.gnome-look.org/browse/cat/109/page/1/ord/latest/
+
+#解压
+
+
+#安装主题
+sudo ./install.sh
+
+#利用图形界面修改Grub
+		#安装grub-customizer
+		sudo apt-get install grub-customizer
+
+#更新配置
+sudo update-grub
+
+#重启
+```
+
