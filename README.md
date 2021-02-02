@@ -1,3 +1,14 @@
+## Ubuntu换源
+
+```
+#复制此网站的镜像源
+https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/
+
+#修改配置文件(将原先的配置文件备份)
+sudo cp  /etc/apt/sources.list  /etc/apt/sources_backup.list
+sudo vim /etc/apt/sources.list
+```
+
 ## Chrome
 
 ```
@@ -40,8 +51,6 @@ sudo apt install telegram-desktop
 #启动Telegram
 telegram-desktop
 ```
-
-
 
 ## pip更改镜像源
 
@@ -147,9 +156,11 @@ fusuma
 #更新
 sudo gem update fusuma
 
+#直接在Startup Application中添加fusuma Name和Commond都一样
+
 ```
 
-## Flameshot
+## Flameshot截图
 
 ```
 sudo apt install flameshot
@@ -195,17 +206,11 @@ smbclient -L //localhost/share
 Google
 ```
 
-
-
 ## ZOOM
 
 ```
 wget -O ./zoom.deb https://zoom.us/client/latest/zoom_amd64.deb
 ```
-
-
-
-
 
 ## ubuntu 删除开机启动
 
@@ -213,15 +218,11 @@ wget -O ./zoom.deb https://zoom.us/client/latest/zoom_amd64.deb
 sudo  update-rc.d  apache2 remove 
 ```
 
-
-
 ### 查看CPU频率
 
 ```
 watch grep \"cpu MHz\" /proc/cpuinfo
 ```
-
-
 
 ## dkpg
 
@@ -283,8 +284,6 @@ HandleLidSwitch=ignore
 重启
 ```
 
-
-
 ## Grub
 
 ```
@@ -305,5 +304,15 @@ sudo ./install.sh
 sudo update-grub
 
 #重启
+
 ```
+
+```
+#修改启动设置
+sudo vim /etc/default/grub
+```
+
+![](https://img-blog.csdnimg.cn/20200515024653998.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1pDaGVuMTk5Ng==,size_16,color_FFFFFF,t_70)
+
+
 
