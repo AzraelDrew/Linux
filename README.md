@@ -242,6 +242,9 @@ dpkg -P packagename
 #安装
 apt install packagename
 
+#更新
+sudo apt upgrade
+
 #删除
 apt-get purge / apt-get --purge remove  #删除已安装包（不保留配置文件)
 
