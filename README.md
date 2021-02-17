@@ -234,9 +234,7 @@ dpkg -i packagename
 dpkg -P packagename
 ```
 
-
-
-## apt
+### apt
 
 ```
 #安装
@@ -270,7 +268,7 @@ dpkg -l |grep ^rc|awk '{print $2}' |sudo xargs dpkg -P
 
 
 
-## 关闭笔记本盖子不采取任何操作
+### 关闭笔记本盖子不采取任何操作
 
 ```
 #编辑配置文件
@@ -287,7 +285,7 @@ HandleLidSwitch=ignore
 重启
 ```
 
-## Grub
+### Grub
 
 ```
 #下载主题
@@ -327,5 +325,19 @@ sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor
 sudo apt-get update
 
 sudo apt-get install indicator-sysmonitor
+```
+
+### GNOME
+
+```
+Coverflow Alt-Tab
+
+Dash To Dock
+
+GTile
+
+Lock Keys
+
+Top Panel Workspace Scroll
 ```
 
