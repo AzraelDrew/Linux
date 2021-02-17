@@ -1,4 +1,4 @@
-## Ubuntu换源
+### Ubuntu换源
 
 ```
 #复制此网站的镜像源
@@ -9,7 +9,7 @@ sudo cp  /etc/apt/sources.list  /etc/apt/sources_backup.list
 sudo vim /etc/apt/sources.list
 ```
 
-## Chrome
+### Chrome
 
 ```
 #安装wget
@@ -24,7 +24,7 @@ sudo dpkg google-chrome-stable_current_amd64.deb
 
 ```
 
-## Nodejs
+### Nodejs
 
 ```
 #安装curl
@@ -42,7 +42,7 @@ npm config get registry
 
 ```
 
-## Telegram
+### Telegram
 
 ```
 #安装Telegram
@@ -52,7 +52,7 @@ sudo apt install telegram-desktop
 telegram-desktop
 ```
 
-## pip更改镜像源
+### pip更改镜像源
 
 ```
 pip config set global.index.url  镜像地址
@@ -60,7 +60,7 @@ pip config set global.index.url  镜像地址
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
-## Tab 补全目录不区分大小写
+### Tab 补全目录不区分大小写
 
 - 进入root
 - 编辑文件
@@ -72,7 +72,7 @@ vim /etc/inputrc
 set completion-ignore-case on 
 ```
 
-## 时钟同步
+### 时钟同步
 
 ```
 sudo apt install ntpdate
@@ -80,7 +80,7 @@ sudo nepdate time.windows.com
 sudo hwclock -l -w
 ```
 
-## Clash
+### Clash
 
 ```
 #下载linux-amd64的版本
@@ -115,13 +115,13 @@ Socks: 127.0.0.1  port: 7891
 http://clash.razord.top/
 ```
 
-## 空格预览
+### 空格预览
 
 ```
 sudo apt install gnome-sushi
 ```
 
-## Touchpad
+### Touchpad
 
 ```
 https://github.com/iberianpig/fusuma
@@ -160,19 +160,19 @@ sudo gem update fusuma
 
 ```
 
-## Flameshot截图
+### Flameshot截图
 
 ```
 sudo apt install flameshot
 ```
 
-## VLC
+### VLC
 
 ```
 sudo apt install vlc
 ```
 
-## Sublime Text
+### Sublime Text
 
 ```
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
@@ -185,7 +185,7 @@ ln -s /opt/sublime_text/sublime_text /usr/local/bin/subl
 sudo subl <filename>
 ```
 
-## SMB
+### SMB
 
 ```
 #安装smb服务
@@ -200,19 +200,19 @@ Retype new SMB password:	#再次输入账号密码
 smbclient -L //localhost/share
 ```
 
-## Skype
+### Skype
 
 ```
 Google
 ```
 
-## ZOOM
+### ZOOM
 
 ```
 wget -O ./zoom.deb https://zoom.us/client/latest/zoom_amd64.deb
 ```
 
-## ubuntu 删除开机启动
+### ubuntu 删除开机启动
 
 ```
 sudo  update-rc.d  apache2 remove 
@@ -224,7 +224,7 @@ sudo  update-rc.d  apache2 remove
 watch grep \"cpu MHz\" /proc/cpuinfo
 ```
 
-## dkpg
+### dkpg
 
 ```
 #安装软件
@@ -270,7 +270,7 @@ dpkg -l |grep ^rc|awk '{print $2}' |sudo xargs dpkg -P
 
 
 
-# 关闭笔记本盖子不采取任何操作
+## 关闭笔记本盖子不采取任何操作
 
 ```
 #编辑配置文件
@@ -318,4 +318,14 @@ sudo vim /etc/default/grub
 ![](https://img-blog.csdnimg.cn/20200515024653998.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1pDaGVuMTk5Ng==,size_16,color_FFFFFF,t_70)
 
 
+
+### indicator-sysmonitor
+
+```
+sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor
+
+sudo apt-get update
+
+sudo apt-get install indicator-sysmonitor
+```
 
