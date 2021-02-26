@@ -341,3 +341,12 @@ Lock Keys
 Top Panel Workspace Scroll
 ```
 
+### 设置Terminal为英文
+
+```
+if [ "$TERM"="linux" ] ;then 
+export LANGUAGE=en_US 
+export LANG=en_US.UTF-8 
+fi
+```
+
