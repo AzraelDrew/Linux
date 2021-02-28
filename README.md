@@ -164,6 +164,7 @@ sudo gem update fusuma
 
 ```
 sudo apt install flameshot
+flameshot gui
 ```
 
 ### VLC
@@ -344,6 +345,8 @@ Top Panel Workspace Scroll
 ### 设置Terminal为英文
 
 ```
+vim .bashrc
+
 if [ "$TERM"="linux" ] ;then 
 export LANGUAGE=en_US 
 export LANG=en_US.UTF-8 
