@@ -173,19 +173,6 @@ flameshot gui
 sudo apt install vlc
 ```
 
-### Sublime Text
-
-```
-wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-
-sudo apt install subliem-text
-#以管理员启动Sublime Text
-ln -s /opt/sublime_text/sublime_text /usr/local/bin/subl
-
-#使用Sublime Text打开文件
-sudo subl <filename>
-```
-
 ### SMB
 
 ```
@@ -294,19 +281,20 @@ https://www.gnome-look.org/browse/cat/109/page/1/ord/latest/
 
 #解压
 
-
 #安装主题
+
 sudo ./install.sh
 
 #利用图形界面修改Grub
-		#安装grub-customizer
-		sudo apt-get install grub-customizer
+
+#安装grub-customizer
+
+sudo apt-get install grub-customizer
 
 #更新配置
 sudo update-grub
 
 #重启
-
 ```
 
 ```
@@ -315,8 +303,6 @@ sudo vim /etc/default/grub
 ```
 
 ![](https://img-blog.csdnimg.cn/20200515024653998.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1pDaGVuMTk5Ng==,size_16,color_FFFFFF,t_70)
-
-
 
 ### indicator-sysmonitor
 
