@@ -40,6 +40,8 @@ npm config set registry https://registry.npm.taobao.org
 
 npm config get registry
 
+#清理缓存
+npm cache clean -f
 ```
 
 ### Telegram
