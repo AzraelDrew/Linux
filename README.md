@@ -341,3 +341,9 @@ export LANG=en_US.UTF-8
 fi
 ```
 
+### KDE
+
+```
+sudo apt build-dep kdeconnect
+```
+
