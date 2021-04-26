@@ -347,3 +347,16 @@ fi
 sudo apt build-dep kdeconnect
 ```
 
+### ZSH
+
+```
+sudo apt install zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sudo apt install fonts-powerline
+
+设置默认终端
+chsh -s /bin/zsh
+chsh -s /bin/bash
+
+```
+
