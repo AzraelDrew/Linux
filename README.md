@@ -360,3 +360,25 @@ chsh -s /bin/bash
 
 ```
 
+### UxPlay
+
+```
+git clone https://github.com/antimof/UxPlay.git
+cd UxPlay
+mkdir build
+cd build
+cmake ..
+make
+
+sudo systemctl start avahi-daemon   //启动服务
+./uxpaly   //启动软件
+```
+
+### scrcpy
+
+```
+sudo apt install scrcpy
+打开usb调试
+scrcpy  //启动软件
+```
+
