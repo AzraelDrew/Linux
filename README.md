@@ -54,6 +54,8 @@
 
 [scrcpy](#scrcpy)
 
+[GitPorxy](#GitPorxy)
+
 ### Ubuntu换源
 
 ```
@@ -436,5 +438,22 @@ sudo systemctl start avahi-daemon   //启动服务
 sudo apt install scrcpy
 打开usb调试
 scrcpy  //启动软件
+```
+
+### GitPorxy
+
+```
+[http]
+
+proxy = http://127.0.0.1:7890
+
+proxy = socks5://127.0.0.1:7890
+[https]
+
+proxy = socks5://127.0.0.1:7890
+
+proxy = https://127.0.0.1:7890
+
+git config -l --global
 ```
 
