@@ -118,7 +118,7 @@ pip config set global.index.url  镜像地址
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
-### Tab 补全目录不区分大小写
+### Tab补全目录不区分大小写
 
 - 进入root
 - 编辑文件
@@ -258,7 +258,7 @@ Google
 wget -O ./zoom.deb https://zoom.us/client/latest/zoom_amd64.deb
 ```
 
-### ubuntu 删除开机启动
+### ubuntu删除开机启动
 
 ```
 sudo  update-rc.d  apache2 remove 
