@@ -443,6 +443,8 @@ scrcpy  //启动软件
 ### GitPorxy
 
 ```
+sudo vim ~/.gitconfig
+
 [http]
 
 proxy = http://127.0.0.1:7890
