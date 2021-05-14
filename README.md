@@ -1,56 +1,56 @@
-[Ubuntu换源](#ubuntu--)
+[Ubuntu换源](#Ubuntu换源)
 
-[Chrome](#chrome)
+[Chrome](#Chrome)
 
-[Nodejs](#nodejs)
+[Nodejs](#Nodejs)
 
-[Telegram](#telegram)
+[Telegram](#Telegram)
 
-[pip更改镜像源](#pip-----)
+[pip更改镜像源](#pip更改镜像源)
 
-[Tab 补全目录不区分大小写](#tab-----------)
+[Tab 补全目录不区分大小写](#Tab 补全目录不区分大小写)
 
-[时钟同步](#----)
+[时钟同步](#时钟同步)
 
-[Clash](#clash)
+[Clash](#Clash)
 
-[空格预览](#----)
+[空格预览](#空格预览])
 
-[Touchpad](#touchpad)
+[Touchpad](#Touchpad)
 
-[Flameshot截图](#flameshot--)
+[Flameshot截图](#Flameshot截图)
 
-[VLC](#vlc)
+[VLC](#VLC)
 
-[SMB](#smb)
+[SMB](#SMB)
 
-[Skype](#skype)
+[Skype](#Skype)
 
-[ZOOM](#zoom)
+[ZOOM](#ZOOM)
 
-[ubuntu 删除开机启动](#ubuntu-------)
+[ubuntu 删除开机启动](#ubuntu 删除开机启动)
 
-[查看CPU频率](#--cpu--)
+[查看CPU频率](#查看CPU频率)
 
 [dkpg](#dkpg)
 
 [apt](#apt)
 
-[关闭笔记本盖子不采取任何操作](#--------------)
+[关闭笔记本盖子不采取任何操作](#关闭笔记本盖子不采取任何操作)
 
-[Grub](#grub)
+[Grub](#Grub)
 
 [indicator-sysmonitor](#indicator-sysmonitor)
 
-[GNOME](#gnome)
+[GNOME](#Gnome)
 
-[设置Terminal为英文](#--terminal---)
+[设置Terminal为英文](#设置Terminal为英文)
 
-[KDE](#kde)
+[KDE](#KDE)
 
-[ZSH](#zsh)
+[ZSH](#ZSH)
 
-[UxPlay](#uxplay)
+[UxPlay](#UxPlay)
 
 [scrcpy](#scrcpy)
 
