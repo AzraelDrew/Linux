@@ -93,6 +93,10 @@ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 
 sudo apt install nodejs
 
+#更新
+sudo npm install n -g
+sudo n stable
+
 #换源
 npm config set registry https://registry.npm.taobao.org
 
