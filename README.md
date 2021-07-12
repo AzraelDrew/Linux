@@ -56,6 +56,8 @@
 
 [GitPorxy](#GitPorxy)
 
+[软链接](#软链接)
+
 ### Ubuntu换源
 
 ```
@@ -461,5 +463,12 @@ proxy = socks5://127.0.0.1:7890
 proxy = https://127.0.0.1:7890
 
 git config -l --global
+```
+
+### 软链接
+
+```
+sudo chmod 777 filename
+sudo ln -sf filename  位置
 ```
 
