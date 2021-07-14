@@ -58,6 +58,8 @@
 
 [软链接](#软链接)
 
+[xampp](#xampp)
+
 ### Ubuntu换源
 
 ```
@@ -470,5 +472,22 @@ git config -l --global
 ```
 sudo chmod 777 filename
 sudo ln -sf filename  位置
+```
+### xampp
+
+```
+下载xampp
+
+sudo ./xampp**.run
+
+#启动管理工具
+sudo /opt/lampp/manager-linux-x64.run
+
+#更改文件夹权限
+sudo chmod a+w -R /opt/lampp/htdocs
+
+#建立软链接（快捷方式）
+sudo ln -sf /opt/lampp/htdocs/ 
+
 ```
 
