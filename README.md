@@ -547,15 +547,18 @@ sudo mysql
 
 use mysql;
 
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Root_12root';
-
+//此处设置一个复杂的密码，然后退出
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'Root_12root';
 
+mysql -uroot -p  //输入Root_12root
+
+#密码规则  每次设置密码时都要使用
 set global validate_password.length=1;
 
 set global validate_password.policy=0;
 
-ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';
+#更改为一个相对简单的密码
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'yznaisy';
 
 FLUSH PRIVILEGES;
 
