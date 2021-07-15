@@ -68,6 +68,22 @@
 #复制此网站的镜像源
 https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/
 
+
+# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+
+# 预发布软件源，不建议启用
+# deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
+
+
 #修改配置文件(将原先的配置文件备份)
 sudo cp  /etc/apt/sources.list  /etc/apt/sources_backup.list
 sudo vim /etc/apt/sources.list
@@ -99,17 +115,19 @@ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 
 sudo apt install nodejs
 
-#更新
-sudo npm install n -g
-sudo n stable
+sudo apt install npm
 
 #换源
 npm config set registry https://registry.npm.taobao.org
 
 npm config get registry
+#更新
+sudo npm install n -g
+sudo n stable
+
 
 #清理缓存
-npm cache clean -f
+sudo npm cache clean -f
 ```
 
 ### Telegram
@@ -135,7 +153,7 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 ```shell
 #进入root
 #编辑文件
-vim /etc/inputrc
+sudo vim /etc/inputrc
 
 在文件中添加如下代码
 set completion-ignore-case on 
@@ -145,7 +163,7 @@ set completion-ignore-case on
 
 ```shell
 sudo apt install ntpdate
-sudo nepdate time.windows.com
+sudo ntpdate time.windows.com
 sudo hwclock -l -w
 ```
 
@@ -173,7 +191,7 @@ sudo curl clash托管链接 >> config.yaml
 
 #设置网络代理
 设为手动模式
-http: 127.0.0.1  port: 7890
+http:  127.0.0.1  port: 7890
 https: 127.0.0.1  port: 7890
 Socks: 127.0.0.1  port: 7891
 
@@ -246,7 +264,7 @@ sudo apt install vlc
 
 ```shell
 #安装smb服务
-sudo apt-get install smb*
+sudo apt install smb*
 
 #创建一个smb账号
 sudo smbpasswd -a  ubuntu账号名称
@@ -285,17 +303,17 @@ watch grep \"cpu MHz\" /proc/cpuinfo
 
 ```shell
 #安装软件
-dpkg -i packagename
+sudo dpkg -i packagename
 
-#卸载软件
-dpkg -P packagename
+#卸载软件 
+sudo dpkg -P packagename
 ```
 
 ### apt
 
 ```shell
 #安装
-apt install packagename
+sudo apt install packagename
 
 #更新
 sudo apt upgrade
@@ -316,11 +334,11 @@ sudo apt clean
 使用 apt-get clean 会将 /var/cache/apt/archives/ 的 所有 deb 删掉，可以理解为 rm /var/cache/apt/archives/*.deb
 
 # 删除软件及其配置文件
-apt --purge remove <package>
+sudo apt --purge remove <package>
 # 删除没用的依赖包
-apt autoremove <package>
+sudo apt autoremove <package>
 # 此时dpkg的列表中有“rc”状态的软件包，可以执行如下命令做最后清理：
-dpkg -l |grep ^rc|awk '{print $2}' |sudo xargs dpkg -P
+sudo dpkg -l |grep ^rc|awk '{print $2}' |sudo xargs dpkg -P
 ```
 
 
@@ -358,7 +376,7 @@ sudo ./install.sh
 
 #安装grub-customizer
 
-sudo apt-get install grub-customizer
+sudo apt install grub-customizer
 
 #更新配置
 sudo update-grub
@@ -378,9 +396,9 @@ sudo vim /etc/default/grub
 ```shell
 sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor
 
-sudo apt-get update
+sudo apt update
 
-sudo apt-get install indicator-sysmonitor
+sudo apt install indicator-sysmonitor
 ```
 
 ### GNOME
@@ -408,12 +426,6 @@ export LANG=en_US.UTF-8
 fi
 ```
 
-### KDE
-
-```shell
-sudo apt build-dep kdeconnect
-```
-
 ### ZSH
 
 ```shell
@@ -433,13 +445,21 @@ git zsh-autosuggestions extract sublime
 
 ```shell
 sudo apt-get install cmake;
-sudo apt-get install cmake libavahi-compat-libdnssd-dev libplist-dev libssl-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev gstreamer1.0-libav 
-gstreamer1.0-vaapi gstreamer1.0-plugins-bad;
+
+sudo apt-get install cmake libavahi-compat-libdnssd-dev libplist-dev libssl-dev \
+libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev gstreamer1.0-libav \
+gstreamer1.0-vaapi gstreamer1.0-plugins-bad
+
 git clone https://github.com/antimof/UxPlay.git;
+
 cd UxPlay;
+
 mkdir build;
+
 cd build;
+
 cmake ..;
+
 make;
 
 sudo systemctl start avahi-daemon   //启动服务
@@ -452,7 +472,7 @@ sudo systemctl start avahi-daemon   //启动服务
 sudo apt install scrcpy
 打开usb调试
 adb tcpip 5555
-adb connect 192.168.2.234:5555
+adb connect 192.168.3.58:5555
 scrcpy -b 3M -m 800
 意思是限制 3 Mbps，画面分辨率限制 800，数值可以随意调整。
 scrcpy  //启动软件
