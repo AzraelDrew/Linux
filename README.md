@@ -60,9 +60,11 @@
 
 [xampp](#xampp)
 
+[OBS](#OBS)
+
 ### Ubuntu换源
 
-```
+```shell
 #复制此网站的镜像源
 https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/
 
@@ -73,7 +75,7 @@ sudo vim /etc/apt/sources.list
 
 ### Chrome
 
-```
+```shell
 #安装wget
 sudo apt install wget  
 
@@ -88,7 +90,7 @@ sudo dpkg google-chrome-stable_current_amd64.deb
 
 ### Nodejs
 
-```
+```shell
 #安装curl
 sudo apt install curl  
 
@@ -112,7 +114,7 @@ npm cache clean -f
 
 ### Telegram
 
-```
+```shell
 #安装Telegram
 sudo apt install telegram-desktop
 
@@ -122,7 +124,7 @@ telegram-desktop
 
 ### pip更改镜像源
 
-```
+```shell
 pip config set global.index.url  镜像地址
 
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
@@ -130,10 +132,9 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 ### Tab补全目录不区分大小写
 
-- 进入root
-- 编辑文件
-
-```
+```shell
+#进入root
+#编辑文件
 vim /etc/inputrc
 
 在文件中添加如下代码
@@ -142,7 +143,7 @@ set completion-ignore-case on
 
 ### 时钟同步
 
-```
+```shell
 sudo apt install ntpdate
 sudo nepdate time.windows.com
 sudo hwclock -l -w
@@ -150,7 +151,7 @@ sudo hwclock -l -w
 
 ### Clash
 
-```
+```shell
 #下载linux-amd64的版本
 
 #解压 
@@ -185,13 +186,13 @@ http://clash.razord.top/
 
 ### 空格预览
 
-```
+```shell
 sudo apt install gnome-sushi
 ```
 
 ### Touchpad
 
-```
+```shell
 https://github.com/iberianpig/fusuma
 
 #配置文件在 .config/fusuma/config.yaml
@@ -230,20 +231,20 @@ sudo gem update fusuma
 
 ### Flameshot截图
 
-```
+```shell
 sudo apt install flameshot
 flameshot gui
 ```
 
 ### VLC
 
-```
+```shell
 sudo apt install vlc
 ```
 
 ### SMB
 
-```
+```shell
 #安装smb服务
 sudo apt-get install smb*
 
@@ -258,31 +259,31 @@ smbclient -L //localhost/share
 
 ### Skype
 
-```
+```shell
 Google
 ```
 
 ### ZOOM
 
-```
+```shell
 wget -O ./zoom.deb https://zoom.us/client/latest/zoom_amd64.deb
 ```
 
 ### ubuntu删除开机启动
 
-```
+```shell
 sudo  update-rc.d  apache2 remove 
 ```
 
 ### 查看CPU频率
 
-```
+```shell
 watch grep \"cpu MHz\" /proc/cpuinfo
 ```
 
 ### dkpg
 
-```
+```shell
 #安装软件
 dpkg -i packagename
 
@@ -292,7 +293,7 @@ dpkg -P packagename
 
 ### apt
 
-```
+```shell
 #安装
 apt install packagename
 
@@ -326,7 +327,7 @@ dpkg -l |grep ^rc|awk '{print $2}' |sudo xargs dpkg -P
 
 ### 关闭笔记本盖子不采取任何操作
 
-```
+```shell
 #编辑配置文件
 sudo vim  /etc/systemd/logind.conf
 
@@ -343,7 +344,7 @@ HandleLidSwitch=ignore
 
 ### Grub
 
-```
+```shell
 #下载主题
 https://www.gnome-look.org/browse/cat/109/page/1/ord/latest/
 
@@ -365,7 +366,7 @@ sudo update-grub
 #重启
 ```
 
-```
+```shell
 #修改启动设置
 sudo vim /etc/default/grub
 ```
@@ -374,7 +375,7 @@ sudo vim /etc/default/grub
 
 ### indicator-sysmonitor
 
-```
+```shell
 sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor
 
 sudo apt-get update
@@ -384,7 +385,7 @@ sudo apt-get install indicator-sysmonitor
 
 ### GNOME
 
-```
+```shell
 Coverflow Alt-Tab
 
 Dash To Dock
@@ -398,7 +399,7 @@ Top Panel Workspace Scroll
 
 ### 设置Terminal为英文
 
-```
+```shell
 vim .bashrc
 
 if [ "$TERM"="linux" ] ;then 
@@ -409,13 +410,13 @@ fi
 
 ### KDE
 
-```
+```shell
 sudo apt build-dep kdeconnect
 ```
 
 ### ZSH
 
-```
+```shell
 sudo apt install zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 sudo apt install fonts-powerline
@@ -430,7 +431,7 @@ git zsh-autosuggestions extract sublime
 
 ### UxPlay
 
-```
+```shell
 sudo apt-get install cmake;
 sudo apt-get install cmake libavahi-compat-libdnssd-dev libplist-dev libssl-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev gstreamer1.0-libav 
 gstreamer1.0-vaapi gstreamer1.0-plugins-bad;
@@ -447,7 +448,7 @@ sudo systemctl start avahi-daemon   //启动服务
 
 ### scrcpy
 
-```
+```shell
 sudo apt install scrcpy
 打开usb调试
 adb tcpip 5555
@@ -459,7 +460,7 @@ scrcpy  //启动软件
 
 ### GitPorxy
 
-```
+```shell
 sudo vim ~/.gitconfig
 
 [http]
@@ -478,13 +479,13 @@ git config -l --global
 
 ### 软链接
 
-```
+```shell
 sudo chmod 777 filename
 sudo ln -sf filename  位置
 ```
 ### xampp
 
-```
+```shell
 下载xampp
 
 sudo ./xampp**.run
@@ -498,5 +499,11 @@ sudo chmod a+w -R /opt/lampp/htdocs
 #建立软链接（快捷方式）
 sudo ln -sf /opt/lampp/htdocs/ 
 
+```
+
+### OBS
+
+```shell
+sudo apt install obs-studio
 ```
 
