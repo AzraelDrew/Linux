@@ -14,7 +14,7 @@
 
 [Clash](#Clash)
 
-[空格预览](#空格预览])
+[空格预览](#空格预览)
 
 [Touchpad](#Touchpad)
 
@@ -78,7 +78,6 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
-
 # 预发布软件源，不建议启用
 # deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
@@ -436,6 +435,8 @@ sudo apt install fonts-powerline
 chsh -s /bin/zsh
 chsh -s /bin/bash
 
+#vscode乱码
+"terminal.integrated.fontFamily": "Menlo for Powerline",
 #插件
 git zsh-autosuggestions extract sublime
 ```

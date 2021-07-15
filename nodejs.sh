@@ -5,3 +5,6 @@ npm config set registry https://registry.npm.taobao.org;
 sudo npm install n -g;
 sudo n stable;
 sudo npm install -g @vue/cli;
+node -version;
+npm --version;
+vue -V;
