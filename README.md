@@ -62,6 +62,10 @@
 
 [OBS](#OBS)
 
+[mysql](#mysql)
+
+[Dbeaver](#Dbeaver)
+
 ### Ubuntu换源
 
 ```shell
@@ -525,5 +529,42 @@ sudo ln -sf /opt/lampp/htdocs/
 
 ```shell
 sudo apt install obs-studio
+```
+
+### mysql
+
+```shell
+#安装
+sudo apt install mysql-server
+
+#查看服务
+systemctl status mysql.service
+
+#配置mysql
+sudo mysql_secure_installation
+
+sudo mysql
+
+use mysql;
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Root_12root';
+
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'Root_12root';
+
+set global validate_password.length=1;
+
+set global validate_password.policy=0;
+
+ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';
+
+FLUSH PRIVILEGES;
+
+```
+
+### Dbeaver
+
+```shell
+sudo snap install dbeaver-ce  
+或者下*.deb包
 ```
 
