@@ -111,7 +111,7 @@ sudo dpkg google-chrome-stable_current_amd64.deb
 sudo apt install curl  
 
 node14.x
-curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -   
+sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -   
 
 sudo apt install nodejs
 
@@ -124,7 +124,6 @@ npm config get registry
 #更新
 sudo npm install n -g
 sudo n stable
-
 
 #清理缓存
 sudo npm cache clean -f
