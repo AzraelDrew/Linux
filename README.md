@@ -571,3 +571,17 @@ sudo snap install dbeaver-ce
 或者下*.deb包
 ```
 
+### PHP
+
+```shell
+sudo apt install php libapache2-mod-php
+
+sudo systemctl restart apache2
+
+sudo chmod a+w -R /var/www
+
+sudo ln -sf /var/www ~/Code
+
+php文件及文件夹都创建在html文件夹下
+```
+
