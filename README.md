@@ -599,7 +599,7 @@ sudo apt-get update
 sudo apt-get install brightness-controller-simple
 ```
 
-###  安装 rmp 格式的软件
+###  安装rmp格式的软件
 
 比如我们下载了 xmind 安装包 XMind-2020.rpm：
 
