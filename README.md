@@ -42,7 +42,7 @@
 
 [indicator-sysmonitor](#indicator-sysmonitor)
 
-[GNOME](#Gnome)
+[GNexOME](#Gnome)
 
 [设置Terminal为英文](#设置Terminal为英文)
 
@@ -412,15 +412,17 @@ sudo apt install indicator-sysmonitor
 ### GNOME
 
 ```shell
-Coverflow Alt-Tab
+GSConnect
 
 Dash To Dock
 
-GTile
+Hide Top Bar
 
 Lock Keys
 
-Top Panel Workspace Scroll
+Status Title Bar
+
+Transparent Top Bar
 ```
 
 ### 设置Terminal为英文
