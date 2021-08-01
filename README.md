@@ -66,6 +66,10 @@
 
 [Dbeaver](#Dbeaver)
 
+[多显示器亮度调节](#多显示器亮度调节)
+
+[PHP](#PHP)
+
 ### Ubuntu换源
 
 ```shell
@@ -583,5 +587,13 @@ sudo chmod a+w -R /var/www
 sudo ln -sf /var/www ~/Code
 
 php文件及文件夹都创建在html文件夹下
+```
+
+### 多显示器亮度调节
+
+```
+sudo add-apt-repository ppa:apandada1/brightness-controller 
+sudo apt-get update 
+sudo apt-get install brightness-controller-simple
 ```
 
