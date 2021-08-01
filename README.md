@@ -70,6 +70,8 @@
 
 [PHP](#PHP)
 
+[ 安装 rmp 格式的软件](# 安装 rmp 格式的软件)
+
 ### Ubuntu换源
 
 ```shell
@@ -597,3 +599,23 @@ sudo apt-get update
 sudo apt-get install brightness-controller-simple
 ```
 
+###  安装 rmp 格式的软件
+
+比如我们下载了 xmind 安装包 XMind-2020.rpm：
+
+```
+# 添加 Universe 仓库（如果未添加）
+sudo add-apt-repository universe
+
+# 更新
+sudo apt update
+
+# 安装 Alien
+sudo apt install alien
+
+# 将.rpm 包转换为.deb 包（当前目录下会生成一个 deb 安装包，比如：XMind-2020.deb）
+sudo alien XMind-2020.rpm
+
+# 安装
+sudo dpkg -i XMind-2020.deb
+```
