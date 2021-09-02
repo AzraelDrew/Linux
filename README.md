@@ -70,7 +70,6 @@ sudo n stable
 
 #清理缓存
 sudo npm cache clean -f
-```
 
 作用 npm Yarn
 安装 npm install(i) yarn
@@ -83,6 +82,7 @@ sudo npm cache clean -f
 卸载 npm uninstall [–save/–save-dev] yarn remove xx
 清除缓存 npm cache clean yarn cache clean
 重装 rm -rf node_modules && npm install yarn upgrade
+```
 
 ### Telegram
 
@@ -548,9 +548,9 @@ sudo apt-get install brightness-controller-simple
 
 ### 安装 rmp 格式的软件
 
+```
 比如我们下载了 xmind 安装包 XMind-2020.rpm：
 
-```
 # 添加 Universe 仓库（如果未添加）
 sudo add-apt-repository universe
 
