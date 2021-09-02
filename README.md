@@ -1,78 +1,12 @@
-[Ubuntu换源](#Ubuntu换源)
+[Ubuntu 换源](#Ubuntu换源)[Chrome](#Chrome)[Nodejs](#Nodejs)[Telegram](#Telegram)[pip 更改镜像源](#pip更改镜像源)
+[Tab 补全目录不区分大小写](#Tab补全目录不区分大小写)[时钟同步](#时钟同步)[Clash](#Clash)[空格预览](#空格预览)
+[Touchpad](#Touchpad)[Flameshot 截图](#Flameshot截图)[VLC](#VLC)[SMB](#SMB)[Skype](#Skype)[ZOOM](#ZOOM)
+[ubuntu 删除开机启动](#ubuntu删除开机启动)[查看 CPU 频率](#查看CPU频率)[dkpg](#dkpg)[apt](#apt)[关闭笔记本盖子不采取任何操作](#关闭笔记本盖子不采取任何操作)
+[Grub](#Grub)[indicator-sysmonitor](#indicator-sysmonitor)[GNexOME](#Gnome)[设置 Terminal 为英文](#设置Terminal为英文)
+[ZSH](#ZSH)[UxPlay](#UxPlay)[scrcpy](#scrcpy)[GitPorxy](#GitPorxy)[软链接](#软链接)[xampp](#xampp)[OBS](#OBS)[mysql](#mysql)[Dbeaver](#Dbeaver)
+[多显示器亮度调节](#多显示器亮度调节)[PHP](#PHP)[安装 rmp 格式的软件](#安装rmp格式的软件)
 
-[Chrome](#Chrome)
-
-[Nodejs](#Nodejs)
-
-[Telegram](#Telegram)
-
-[pip更改镜像源](#pip更改镜像源)
-
-[Tab补全目录不区分大小写](#Tab补全目录不区分大小写)
-
-[时钟同步](#时钟同步)
-
-[Clash](#Clash)
-
-[空格预览](#空格预览)
-
-[Touchpad](#Touchpad)
-
-[Flameshot截图](#Flameshot截图)
-
-[VLC](#VLC)
-
-[SMB](#SMB)
-
-[Skype](#Skype)
-
-[ZOOM](#ZOOM)
-
-[ubuntu删除开机启动](#ubuntu删除开机启动)
-
-[查看CPU频率](#查看CPU频率)
-
-[dkpg](#dkpg)
-
-[apt](#apt)
-
-[关闭笔记本盖子不采取任何操作](#关闭笔记本盖子不采取任何操作)
-
-[Grub](#Grub)
-
-[indicator-sysmonitor](#indicator-sysmonitor)
-
-[GNexOME](#Gnome)
-
-[设置Terminal为英文](#设置Terminal为英文)
-
-[KDE](#KDE)
-
-[ZSH](#ZSH)
-
-[UxPlay](#UxPlay)
-
-[scrcpy](#scrcpy)
-
-[GitPorxy](#GitPorxy)
-
-[软链接](#软链接)
-
-[xampp](#xampp)
-
-[OBS](#OBS)
-
-[mysql](#mysql)
-
-[Dbeaver](#Dbeaver)
-
-[多显示器亮度调节](#多显示器亮度调节)
-
-[PHP](#PHP)
-
-[安装rmp格式的软件](#安装rmp格式的软件)
-
-### Ubuntu换源
+### Ubuntu 换源
 
 ```shell
 #复制此网站的镜像源
@@ -102,13 +36,13 @@ sudo vim /etc/apt/sources.list
 
 ```shell
 #安装wget
-sudo apt install wget  
+sudo apt install wget
 
 #下载chrome.deb
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb  
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
 #安装chrome
-sudo dpkg google-chrome-stable_current_amd64.deb  
+sudo dpkg google-chrome-stable_current_amd64.deb
 
 
 ```
@@ -117,10 +51,10 @@ sudo dpkg google-chrome-stable_current_amd64.deb
 
 ```shell
 #安装curl
-sudo apt install curl  
+sudo apt install curl
 
 node14.x
-sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -   
+sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 
 sudo apt install nodejs
 
@@ -138,19 +72,17 @@ sudo n stable
 sudo npm cache clean -f
 ```
 
-
-
-作用	npm	Yarn
-安装	npm install(i)	yarn
-卸载	npm uninstall(un)	yarn remove
-全局安装	npm install xxx –-global(-g)	yarn global add xxx
-安装包	npm install xxx –save(-S)	yarn add xxx
-开发模式安装包	npm install xxx –save-dev(-D)	yarn add xxx –dev(-D)
-更新	npm update –save	yarn upgrade
-全局更新	npm update –global	yarn global upgrade
-卸载	npm uninstall [–save/–save-dev]	yarn remove xx
-清除缓存	npm cache clean	yarn cache clean
-重装	rm -rf node_modules && npm install	yarn upgrade
+作用 npm Yarn
+安装 npm install(i) yarn
+卸载 npm uninstall(un) yarn remove
+全局安装 npm install xxx –-global(-g) yarn global add xxx
+安装包 npm install xxx –save(-S) yarn add xxx
+开发模式安装包 npm install xxx –save-dev(-D) yarn add xxx –dev(-D)
+更新 npm update –save yarn upgrade
+全局更新 npm update –global yarn global upgrade
+卸载 npm uninstall [–save/–save-dev] yarn remove xx
+清除缓存 npm cache clean yarn cache clean
+重装 rm -rf node_modules && npm install yarn upgrade
 
 ### Telegram
 
@@ -162,7 +94,7 @@ sudo apt install telegram-desktop
 telegram-desktop
 ```
 
-### pip更改镜像源
+### pip 更改镜像源
 
 ```shell
 pip config set global.index.url  镜像地址
@@ -170,7 +102,7 @@ pip config set global.index.url  镜像地址
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
-### Tab补全目录不区分大小写
+### Tab 补全目录不区分大小写
 
 ```shell
 #进入root
@@ -178,7 +110,7 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 sudo vim /etc/inputrc
 
 在文件中添加如下代码
-set completion-ignore-case on 
+set completion-ignore-case on
 ```
 
 ### 时钟同步
@@ -194,7 +126,7 @@ sudo hwclock -l -w
 ```shell
 #下载linux-amd64的版本
 
-#解压 
+#解压
 sudo gunzip ***.gz
 
 #重命名
@@ -269,7 +201,7 @@ sudo gem update fusuma
 
 ```
 
-### Flameshot截图
+### Flameshot 截图
 
 ```shell
 sudo apt install flameshot
@@ -309,13 +241,13 @@ Google
 wget -O ./zoom.deb https://zoom.us/client/latest/zoom_amd64.deb
 ```
 
-### ubuntu删除开机启动
+### ubuntu 删除开机启动
 
 ```shell
-sudo  update-rc.d  apache2 remove 
+sudo  update-rc.d  apache2 remove
 ```
 
-### 查看CPU频率
+### 查看 CPU 频率
 
 ```shell
 watch grep \"cpu MHz\" /proc/cpuinfo
@@ -327,7 +259,7 @@ watch grep \"cpu MHz\" /proc/cpuinfo
 #安装软件
 sudo dpkg -i packagename
 
-#卸载软件 
+#卸载软件
 sudo dpkg -P packagename
 ```
 
@@ -362,8 +294,6 @@ sudo apt autoremove <package>
 # 此时dpkg的列表中有“rc”状态的软件包，可以执行如下命令做最后清理：
 sudo dpkg -l |grep ^rc|awk '{print $2}' |sudo xargs dpkg -P
 ```
-
-
 
 ### 关闭笔记本盖子不采取任何操作
 
@@ -439,14 +369,14 @@ Status Title Bar
 Transparent Top Bar
 ```
 
-### 设置Terminal为英文
+### 设置 Terminal 为英文
 
 ```shell
 vim .bashrc
 
-if [ "$TERM"="linux" ] ;then 
-export LANGUAGE=en_US 
-export LANG=en_US.UTF-8 
+if [ "$TERM"="linux" ] ;then
+export LANGUAGE=en_US
+export LANG=en_US.UTF-8
 fi
 ```
 
@@ -529,6 +459,7 @@ git config -l --global
 sudo chmod 777 filename
 sudo ln -sf filename  位置
 ```
+
 ### xampp
 
 ```shell
@@ -543,7 +474,7 @@ sudo /opt/lampp/manager-linux-x64.run
 sudo chmod a+w -R /opt/lampp/htdocs
 
 #建立软链接（快捷方式）
-sudo ln -sf /opt/lampp/htdocs/ 
+sudo ln -sf /opt/lampp/htdocs/
 
 ```
 
@@ -589,7 +520,7 @@ FLUSH PRIVILEGES;
 ### Dbeaver
 
 ```shell
-sudo snap install dbeaver-ce  
+sudo snap install dbeaver-ce
 或者下*.deb包
 ```
 
@@ -610,12 +541,12 @@ php文件及文件夹都创建在html文件夹下
 ### 多显示器亮度调节
 
 ```
-sudo add-apt-repository ppa:apandada1/brightness-controller 
-sudo apt-get update 
+sudo add-apt-repository ppa:apandada1/brightness-controller
+sudo apt-get update
 sudo apt-get install brightness-controller-simple
 ```
 
-###  安装rmp格式的软件
+### 安装 rmp 格式的软件
 
 比如我们下载了 xmind 安装包 XMind-2020.rpm：
 
