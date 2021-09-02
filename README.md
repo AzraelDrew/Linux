@@ -1,10 +1,10 @@
-[Ubuntu 换源](#Ubuntu换源)[Chrome](#Chrome)[Nodejs](#Nodejs)[Telegram](#Telegram)[pip 更改镜像源](#pip更改镜像源)
-[Tab 补全目录不区分大小写](#Tab补全目录不区分大小写)[时钟同步](#时钟同步)[Clash](#Clash)[空格预览](#空格预览)
-[Touchpad](#Touchpad)[Flameshot 截图](#Flameshot截图)[VLC](#VLC)[SMB](#SMB)[Skype](#Skype)[ZOOM](#ZOOM)
-[ubuntu 删除开机启动](#ubuntu删除开机启动)[查看 CPU 频率](#查看CPU频率)[dkpg](#dkpg)[apt](#apt)[关闭笔记本盖子不采取任何操作](#关闭笔记本盖子不采取任何操作)
-[Grub](#Grub)[indicator-sysmonitor](#indicator-sysmonitor)[GNexOME](#Gnome)[设置 Terminal 为英文](#设置Terminal为英文)
-[ZSH](#ZSH)[UxPlay](#UxPlay)[scrcpy](#scrcpy)[GitPorxy](#GitPorxy)[软链接](#软链接)[xampp](#xampp)[OBS](#OBS)[mysql](#mysql)[Dbeaver](#Dbeaver)
-[多显示器亮度调节](#多显示器亮度调节)[PHP](#PHP)[安装 rmp 格式的软件](#安装rmp格式的软件)
+[Ubuntu 换源](#Ubuntu换源) [Chrome](#Chrome) [Nodejs](#Nodejs) [Telegram](#Telegram) [pip 更改镜像源](#pip更改镜像源)
+[Tab 补全目录不区分大小写](#Tab补全目录不区分大小写) [时钟同步](#时钟同步) [Clash](#Clash) [空格预览](#空格预览)
+[Touchpad](#Touchpad) [Flameshot 截图](#Flameshot截图) [VLC](#VLC) [SMB](#SMB) [Skype](#Skype) [ZOOM](#ZOOM)
+[ubuntu 删除开机启动](#ubuntu删除开机启动) [查看 CPU 频率](#查看CPU频率) [dkpg](#dkpg) [apt](#apt) [关闭笔记本盖子不采取任何操作](#关闭笔记本盖子不采取任何操作)
+[Grub](#Grub) [indicator-sysmonitor](#indicator-sysmonitor) [GNexOME](#Gnome) [设置 Terminal 为英文](#设置Terminal为英文)
+[ZSH](#ZSH) [UxPlay](#UxPlay) [scrcpy](#scrcpy) [GitPorxy](#GitPorxy) [软链接](#软链接) [xampp](#xampp) [OBS](#OBS) [mysql](#mysql) [Dbeaver](#Dbeaver)
+[多显示器亮度调节](#多显示器亮度调节) [PHP](#PHP) [安装 rmp 格式的软件](#安装rmp格式的软件)
 
 ### Ubuntu 换源
 
