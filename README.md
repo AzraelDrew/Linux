@@ -1,10 +1,10 @@
-|          [Ubuntu 换源](#Ubuntu换源)           |                 [SMB](#SMB)                 |                   [Skype](#Skype)                    |               [ZOOM](#ZOOM)               |                         [dkpg](#dkpg)                         |              [apt](#apt)              |
-| :-------------------------------------------: | :-----------------------------------------: | :--------------------------------------------------: | :---------------------------------------: | :-----------------------------------------------------------: | :-----------------------------------: |
-|               [UxPlay](#UxPlay)               |              [scrcpy](#scrcpy)              |                [GitPorxy](#GitPorxy)                 |              [xampp](#xampp)              |                          [OBS](#OBS)                          |            [mysql](#mysql)            |
-|                [Gnome](#Gnome)                |                 [VLC](#VLC)                 |                  [Chrome](#Chrome)                   |             [Nodejs](#Nodejs)             |                     [Telegram](#Telegram)                     |         [时钟同步](#时钟同步)         |
-|                [Clash](#Clash)                |                [Grub](#Grub)                |                [Touchpad](#Touchpad)                 |           [空格预览](#空格预览)           |               [pip 更改镜像源](#pip更改镜像源)                |   [Flameshot 截图](#Flameshot截图)    |
+|          [Ubuntu 换源](#Ubuntu换源)           |                 [SMB](#SMB)                 |                   [Skype](#Skype)                    |               [ZOOM](#ZOOM)               |                        [dkpg](#dkpg)                         |              [apt](#apt)              |
+| :-------------------------------------------: | :-----------------------------------------: | :--------------------------------------------------: | :---------------------------------------: | :----------------------------------------------------------: | :-----------------------------------: |
+|               [UxPlay](#UxPlay)               |              [scrcpy](#scrcpy)              |                [GitPorxy](#GitPorxy)                 |              [xampp](#xampp)              |                         [OBS](#OBS)                          |            [mysql](#mysql)            |
+|                [Gnome](#Gnome)                |                 [VLC](#VLC)                 |                  [Chrome](#Chrome)                   |             [Nodejs](#Nodejs)             |                    [Telegram](#Telegram)                     |         [时钟同步](#时钟同步)         |
+|                [Clash](#Clash)                |                [Grub](#Grub)                |                [Touchpad](#Touchpad)                 |           [空格预览](#空格预览)           |               [pip 更改镜像源](#pip更改镜像源)               |   [Flameshot 截图](#Flameshot截图)    |
 |         [查看 CPU 频率](#查看CPU频率)         | [ubuntu 删除开机启动](#ubuntu删除开机启动)  | [Tab 补全目录不区分大小写](#Tab补全目录不区分大小写) | [安装 rmp 格式的软件](#安装rmp格式的软件) | [关闭笔记本盖子不采取任何操作](#关闭笔记本盖子不采取任何操作) | [多显示器亮度调节](#多显示器亮度调节) |
-| [indicator-sysmonitor](#indicator-sysmonitor) | [设置 Terminal 为英文](#设置Terminal为英文) |                                                      |                                           |                                                               |                                       |
+| [indicator-sysmonitor](#indicator-sysmonitor) | [设置 Terminal 为英文](#设置Terminal为英文) |             [cpu性能模式](#cpu性能模式)              |                                           |                                                              |                                       |
 
 ### Ubuntu 换源
 
@@ -548,7 +548,7 @@ sudo apt-get install brightness-controller-simple
 
 ### 安装 rmp 格式的软件
 
-```
+```shell
 比如我们下载了 xmind 安装包 XMind-2020.rpm：
 
 # 添加 Universe 仓库（如果未添加）
@@ -566,3 +566,19 @@ sudo alien XMind-2020.rpm
 # 安装
 sudo dpkg -i XMind-2020.deb
 ```
+
+### cpu性能模式
+
+```shell
+1、安装cpufrequtils:
+sudo apt-get install cpufrequtils
+
+编辑 /etc/default/cpufrequtils 如不存在则创建，添加条目
+
+GOVERNOR=”performance”
+
+重启生效
+
+systemctl restart cpufrequtils
+```
+
