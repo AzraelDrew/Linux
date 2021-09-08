@@ -582,3 +582,9 @@ GOVERNOR=”performance”
 systemctl restart cpufrequtils
 ```
 
+### xDroid
+
+```shell
+打开设置  将安装apk是的默认图形驱动设为 兼容模式
+```
+
