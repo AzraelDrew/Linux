@@ -1,11 +1,3 @@
-|          [Ubuntu 换源](#Ubuntu换源)           |                 [SMB](#SMB)                 |                   [Skype](#Skype)                    |               [ZOOM](#ZOOM)               |                        [dkpg](#dkpg)                         |              [apt](#apt)              |
-| :-------------------------------------------: | :-----------------------------------------: | :--------------------------------------------------: | :---------------------------------------: | :----------------------------------------------------------: | :-----------------------------------: |
-|               [UxPlay](#UxPlay)               |              [scrcpy](#scrcpy)              |                [GitPorxy](#GitPorxy)                 |              [xampp](#xampp)              |                         [OBS](#OBS)                          |            [mysql](#mysql)            |
-|                [Gnome](#Gnome)                |                 [VLC](#VLC)                 |                  [Chrome](#Chrome)                   |             [Nodejs](#Nodejs)             |                    [Telegram](#Telegram)                     |         [时钟同步](#时钟同步)         |
-|                [Clash](#Clash)                |                [Grub](#Grub)                |                [Touchpad](#Touchpad)                 |           [空格预览](#空格预览)           |               [pip 更改镜像源](#pip更改镜像源)               |   [Flameshot 截图](#Flameshot截图)    |
-|         [查看 CPU 频率](#查看CPU频率)         | [ubuntu 删除开机启动](#ubuntu删除开机启动)  | [Tab 补全目录不区分大小写](#Tab补全目录不区分大小写) | [安装 rmp 格式的软件](#安装rmp格式的软件) | [关闭笔记本盖子不采取任何操作](#关闭笔记本盖子不采取任何操作) | [多显示器亮度调节](#多显示器亮度调节) |
-| [indicator-sysmonitor](#indicator-sysmonitor) | [设置 Terminal 为英文](#设置Terminal为英文) |             [cpu性能模式](#cpu性能模式)              |                                           |                                                              |                                       |
-
 ### Ubuntu 换源
 
 ```shell
@@ -567,7 +559,7 @@ sudo alien XMind-2020.rpm
 sudo dpkg -i XMind-2020.deb
 ```
 
-### cpu性能模式
+### cpu 性能模式
 
 ```shell
 1、安装cpufrequtils:
@@ -588,3 +580,40 @@ systemctl restart cpufrequtils
 打开设置  将安装apk是的默认图形驱动设为 兼容模式
 ```
 
+### 清理 swap 内存空间
+
+```shell
+sudo swapoff -a
+sudo swapon -a
+sudo vim /etc/fstab
+将 /swapfile这一行注释掉
+```
+
+### Snap 软件图标更改
+
+```shell
+sudo vim /var/lib/snapd/desktop/applications/xxxxx.desktop
+
+更改Icon的路径即可
+```
+
+### linux qq 闪退
+
+```shell
+udo rm -rf ~/.config/tencent-qq/qq号
+```
+
+### Wine install qq
+
+```shell
+sudo apt install wine winetricks
+或者直接在商店中下载wine winetricks
+然后打开winetricks(警告可以忽略)
+选择install an application
+后面选择qq
+运行qq
+wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Tencent/QQ/Bin/QQ.exe
+
+修复环境
+winetricks riched20
+```
