@@ -34,7 +34,7 @@ sudo apt install wget
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
 #安装chrome
-sudo dpkg google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
 
 
 ```
@@ -97,12 +97,14 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 ### Tab 补全目录不区分大小写
 
 ```shell
-#进入root
 #编辑文件
 sudo vim /etc/inputrc
 
 在文件中添加如下代码
 set completion-ignore-case on
+
+#或者直接运行下面代码
+sudo echo "set completion-ignore-case on" >> /etc/inputrc
 ```
 
 ### 时钟同步
@@ -113,7 +115,7 @@ sudo ntpdate time.windows.com
 sudo hwclock -l -w
 ```
 
-### Clash
+### Clash/Clashy
 
 ```shell
 #下载linux-amd64的版本
@@ -242,7 +244,7 @@ sudo  update-rc.d  apache2 remove
 ### 查看 CPU 频率
 
 ```shell
-watch grep \"cpu MHz\" /proc/cpuinfo
+watch -n 0.5 grep \"cpu MHz\" /proc/cpuinfo
 ```
 
 ### dkpg
@@ -299,6 +301,8 @@ sudo vim  /etc/systemd/logind.conf
 #改为：
 HandleLidSwitch=ignore
 
+#或者直接运行下面代码
+sudo echo "HandleLidSwitch=ignore" >> /etc/systemd/logind.conf
 #保存退出
 
 重启
@@ -348,7 +352,6 @@ sudo apt install indicator-sysmonitor
 ### GNOME
 
 ```shell
-GSConnect
 
 Dash To Dock
 
@@ -364,7 +367,7 @@ Transparent Top Bar
 ### 设置 Terminal 为英文
 
 ```shell
-vim .bashrc
+sudo  vim ~/.bashrc
 
 if [ "$TERM"="linux" ] ;then
 export LANGUAGE=en_US
@@ -600,7 +603,7 @@ sudo vim /var/lib/snapd/desktop/applications/xxxxx.desktop
 ### linux qq 闪退
 
 ```shell
-udo rm -rf ~/.config/tencent-qq/qq号
+sudo rm -rf ~/.config/tencent-qq/qq号
 ```
 
 ### Wine install qq
@@ -617,3 +620,12 @@ wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Tencent/QQ/Bin/QQ.exe
 修复环境
 winetricks riched20
 ```
+
+### kill  port
+
+```shell
+sudo  lsof  -i:port
+
+kill PID
+```
+
