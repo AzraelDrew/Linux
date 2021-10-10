@@ -629,3 +629,56 @@ sudo  lsof  -i:port
 kill PID
 ```
 
+### Vim
+
+``` 
+#普通模式
+u  撤消
+w  下一个单词
+b  上一个单词
+4j 向下跳4行
+gg 最上方
+G  最下方
+c-d 向下翻页  
+c-u 向上翻页
+fr  移动到当前行的地一个r
+yaw 复制一个单词
+y4j 向下复制4行
+p   当前行下一行粘贴复制的内容
+P   当前行上一行粘贴复制的内容
+dj  删除当前行和下一行
+d8j 删除下8行
+caw 删除当前单词进入输入模式
+cc  删除当前行进入输入模式
+c4j 删除下4行进入输入模式 
+
+配置文件
+vim   ~/.vimrc
+neovim ~/.config/nvim/init.vim 
+imap 输入模式改键
+nmap 正常模式改键
+
+配置
+
+imap jk <Esc>    将esc改为jk
+nmap <Space> :   将空格改为：
+
+插件
+VimPlug
+
+call plug#begin('~/.vim/plugged') 
+
+#此处安装插件
+
+call plug#end()
+
+配置好配置文件后使用命令模式是PlugInstall来安装插件
+
+将Casplock 映射为CtrlS
+
+Tweaks>Keyboard & Mouse> Additional Layout Options>Ctrl postion>
+ Caps Lock as Ctrl
+```
+
+
+
