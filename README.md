@@ -4,7 +4,6 @@
 #复制此网站的镜像源
 https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/
 
-
 # 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
@@ -639,6 +638,7 @@ b  上一个单词
 4j 向下跳4行
 gg 最上方
 G  最下方
+5gg/5G 跳转到第五行
 c-d 向下翻页  
 c-u 向上翻页
 fr  移动到当前行的地一个r
