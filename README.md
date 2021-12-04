@@ -674,11 +674,138 @@ call plug#end()
 
 配置好配置文件后使用命令模式是PlugInstall来安装插件
 
-将Casplock 映射为CtrlS
+将Casplock 映射为Ctrl
 
 Tweaks>Keyboard & Mouse> Additional Layout Options>Ctrl postion>
  Caps Lock as Ctrl
 ```
 
 
+
+```
+{
+    "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    //改变注释颜色
+    "editor.tokenColorCustomizations": {
+        "comments": "#ED4C67" // 注释
+    },
+    "git.ignoreLimitWarning": true, //如果后面还加内容，记得块末用逗号隔开,
+    "prettier.useEditorConfig": false,
+    "prettier.printWidth": 130, // 超过最大值换行
+    "prettier.tabWidth": 2, // 缩进字节数
+    "prettier.useTabs": false, // 缩进不使用tab，使用空格
+    "prettier.semi": true, // 句尾添加分号
+    "prettier.singleQuote": true, // 使用单引号代替双引号
+    "prettier.proseWrap": "preserve", // 默认值。因为使用了一些折行敏感型的渲染器（如GitHub comment）而按照markdown文本样式进行折行
+    "prettier.arrowParens": "avoid", //  (x) => {} 箭头函数参数只有一个时是否要有小括号。avoid：省略括号
+    "prettier.bracketSpacing": true, // 在对象，数组括号与文字之间加空格 "{ foo: bar }"
+    "prettier.endOfLine": "auto", // 结尾是 \n \r \n\r auto
+    "prettier.eslintIntegration": false, //不让prettier使用eslint的代码格式进行校验
+    "prettier.htmlWhitespaceSensitivity": "ignore",
+    "prettier.ignorePath": ".prettierignore", // 不使用prettier格式化的文件填写在项目的.prettierignore文件中
+    "prettier.jsxBracketSameLine": false, // 在jsx中把'>' 是否单独放一行
+    "prettier.jsxSingleQuote": false, // 在jsx中使用单引号代替双引号
+    "prettier.parser": "babylon", // 格式化的解析器，默认是babylon
+    "prettier.requireConfig": false, // Require a 'prettierconfig' to format prettier
+    "prettier.stylelintIntegration": false, //不让prettier使用stylelint的代码格式进行校验
+    "prettier.trailingComma": "es5", // 在对象或数组最后一个元素后面是否加逗号（在ES5中加尾逗号）
+    "prettier.tslintIntegration": false,
+    "vim.useCtrlKeys": true,
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-b>": false,
+        "<C-c>": false,
+        "<C-d>": false,
+        "<C-e>": false,
+        "<C-f>": false,
+        "<C-g>": false,
+        "<C-h>": false,
+        "<C-i>": false,
+        "<C-j>": false,
+        "<C-k>": false,
+        "<C-l>": false,
+        "<C-m>": false,
+        "<C-n>": false,
+        "<C-o>": false,
+        "<C-p>": false,
+        "<C-q>": false,
+        "<C-r>": false,
+        "<C-s>": false,
+        "<C-t>": false,
+        "<C-u>": false,
+        "<C-v>": false,
+        "<C-w>": false,
+        "<C-x>": false,
+        "<C-y>": false,
+        "<C-z>": false
+    },
+    "editor.formatOnSave": true,
+    "editor.fontSize": 16,
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false,
+    "update.mode": "none",
+    "search.followSymlinks": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "beautify.config": "true",
+    "beautify.language": {
+      "html": [
+        "htm",
+        "html",
+        "vue"
+      ],
+      "js": {
+        "type": [
+          "javascript",
+          "json"
+        ],
+        "filename": [
+          ".jshintrc",
+          ".jsbeautify"
+        ]
+      },
+      "css": [
+        "css",
+        "scss",
+        "less"
+      ],
+      "c": [
+        "c"
+      ]
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "octref.vetur"
+    },
+    "tabnine.experimentalAutoImports": true,
+    "remote.SSH.remotePlatform": {
+      "192.168.3.81": "linux"
+    },
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.quickSuggestions": {
+        "strings": true
+    },
+    "editor.suggestSelection": "first",
+    "zenMode.centerLayout": false,
+    "zenMode.fullScreen": false,
+    "zenMode.hideTabs": false,
+    "sync.gist": "dd4d3492c820e163eb790dda0be179fb",
+    "workbench.colorTheme": "Atom Material Theme",
+    "zenMode.hideStatusBar": false,
+    "zenMode.hideLineNumbers": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "explorer.confirmDelete": false,
+    "liveServer.settings.CustomBrowser": "chrome",
+    "explorer.confirmDragAndDrop": false,
+    "code-runner.runInTerminal": true,
+    "vsicons.dontShowNewVersionMessage": true,
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "workbench.iconTheme": "material-icon-theme",
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.accessibilitySupport": "off",
+    "vetur.ignoreProjectWarning": true,
+}
+```
 
