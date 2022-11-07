@@ -17,7 +17,6 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted 
 # deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
 
-
 #修改配置文件(将原先的配置文件备份)
 sudo cp  /etc/apt/sources.list  /etc/apt/sources_backup.list
 sudo vim /etc/apt/sources.list
@@ -130,50 +129,10 @@ http://clash.razord.top/
 sudo apt install gnome-sushi
 ```
 
-### Touchpad
-
-```shell
-https://github.com/iberianpig/fusuma
-
-#配置文件在 .config/fusuma/config.yaml
-
-
-#将用户添加到input组
-sudo gpasswd -a $USER input
-
-#应用
-newgrp input
-
-#安装libinput-tools
-sudo apt-get install libinput-tools
-
-#安装ruby
-sudo apt-get install ruby
-
-#安装Fusuma
-sudo gem install fusuma
-
-#安装xdotool
-sudo apt-get install xdotool
-
-#通过运行以下命令，确保将触摸板事件发送到GNOME桌面
-gsettings set org.gnome.desktop.peripherals.touchpad send-events enabled
-
-#启动Fusuma
-fusuma
-
-#更新
-sudo gem update fusuma
-
-#直接在Startup Application中添加fusuma Name和Commond都一样
-
-```
-
 ### Flameshot 截图
 
 ```shell
 sudo apt install flameshot
-flameshot gui
 ```
 
 ### VLC
@@ -195,12 +154,6 @@ Retype new SMB password:	#再次输入账号密码
 
 #查看当前系统中的共享文件夹列表
 smbclient -L //localhost/share
-```
-
-### Skype
-
-```shell
-Google
 ```
 
 ### ZOOM
@@ -486,13 +439,6 @@ FLUSH PRIVILEGES;
 
 ```
 
-### Dbeaver
-
-```shell
-sudo snap install dbeaver-ce
-或者下*.deb包
-```
-
 ### PHP
 
 ```shell
@@ -572,27 +518,6 @@ sudo vim /etc/fstab
 sudo vim /var/lib/snapd/desktop/applications/xxxxx.desktop
 
 更改Icon的路径即可
-```
-
-### linux qq 闪退
-
-```shell
-sudo rm -rf ~/.config/tencent-qq/qq号
-```
-
-### Wine install qq
-
-```shell
-sudo apt install wine winetricks
-或者直接在商店中下载wine winetricks
-然后打开winetricks(警告可以忽略)
-选择install an application
-后面选择qq
-运行qq
-wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Tencent/QQ/Bin/QQ.exe
-
-修复环境
-winetricks riched20
 ```
 
 ### kill  port
