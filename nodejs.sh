@@ -1,3 +1,4 @@
+sudo echo "185.199.108.133 raw.githubusercontent.com" >> /etc/hosts;
 sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -;
 sudo apt install nodejs npm;
 npm config set registry https://registry.npm.taobao.org;
