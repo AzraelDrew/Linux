@@ -23,21 +23,6 @@ sudo cp  /etc/apt/sources.list  /etc/apt/sources_backup.list
 sudo vim /etc/apt/sources.list
 ```
 
-### Chrome
-
-```shell
-#安装wget
-sudo apt install wget
-
-#下载chrome.deb
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-
-#安装chrome
-sudo dpkg -i google-chrome-stable_current_amd64.deb
-
-
-```
-
 ### Nodejs
 
 ```shell
@@ -73,16 +58,6 @@ sudo npm cache clean -f
 卸载 npm uninstall [–save/–save-dev] yarn remove xx
 清除缓存 npm cache clean yarn cache clean
 重装 rm -rf node_modules && npm install yarn upgrade
-```
-
-### Telegram
-
-```shell
-#安装Telegram
-sudo apt install telegram-desktop
-
-#启动Telegram
-telegram-desktop
 ```
 
 ### pip 更改镜像源
@@ -630,7 +605,7 @@ kill PID
 
 ### Vim
 
-``` 
+``` shell
 #普通模式
 u  撤消
 w  下一个单词
@@ -672,6 +647,44 @@ call plug#begin('~/.vim/plugged')
 
 call plug#end()
 
+
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree'
+autocmd VimEnter * NERDTree
+map <silent> <C-e> :NERDTreeToggle<CR>
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'hdima/python-syntax'
+Plug 'elzr/vim-json'
+Plug 'itchyny/lightline.vim'
+set laststatus=2
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ }
+Plug 'valloric/youcompleteme'
+" YouCompleteMe
+set runtimepath+=~/.vim/plugged/youcompleteme
+let g:ycm_collect_identifiers_from_tags_files = 1 " 开启 YCM 基于标签引擎
+let g:ycm_collect_identifiers_from_comments_and_strings = 1 " 注释与字符串中的内容也⽤于补全
+let g:syntastic_ignore_files=[".*\.py$"]
+let g:ycm_seed_identifiers_with_syntax = 1 " 语法关键字补全
+let g:ycm_complete_in_comments = 1
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_key_list_select_completion = ['<c-n>', '<Down>'] " 映射按键, 没有这个会拦截掉tab, 导
+let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
+let g:ycm_complete_in_comments = 1 " 在注释输⼊中也能补全
+let g:ycm_complete_in_strings = 1 " 在字符串输⼊中也能补全
+let g:ycm_collect_identifiers_from_comments_and_strings = 1 " 注释和字符串中的⽂字也会被收⼊补全
+let g:ycm_global_ycm_extra_conf='~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm'
+let g:ycm_show_diagnostics_ui = 0 " 禁⽤语法检查
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>" | " 回⻋即选中当前项
+nnoremap <c-j> :YcmCompleter GoToDefinitionElseDeclaration<CR>| " 跳转到定义处
+"let g:ycm_min_num_of_chars_for_completion=2
+call plug#end()
+: set number
+
 配置好配置文件后使用命令模式是PlugInstall来安装插件
 
 将Casplock 映射为Ctrl
@@ -680,9 +693,9 @@ Tweaks>Keyboard & Mouse> Additional Layout Options>Ctrl postion>
  Caps Lock as Ctrl
 ```
 
+### viscose-settings
 
-
-```
+```json
 {
     "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
     "editor.fontLigatures": true,
