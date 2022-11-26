@@ -1,10 +1,5 @@
-sudo echo "185.199.108.133 raw.githubusercontent.com" >> /etc/hosts;
-sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -;
-sudo apt install nodejs npm;
-npm config set registry https://registry.npm.taobao.org;
-sudo npm install n -g;
-sudo n stable;
-sudo npm install -g @vue/cli;
-node -version;
-npm --version;
-vue -V;
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash;
+source ~/.zshrc;
+source ~/.bashrc;
+nvm install 12;
+nvm install;

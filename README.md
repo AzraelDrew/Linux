@@ -26,14 +26,28 @@ sudo vim /etc/apt/sources.list
 
 ```shell
 #安装curl
-sudo apt install curl
+sudo apt install wget
 
-node14.x
-sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash;
 
-sudo apt install nodejs
+source ~/.zshrc;
 
-sudo apt install npm
+source ~/.bashrc;
+
+#安装v12
+nvm install 12;     
+
+#安装最新版
+nvm install node;   
+
+#设置别名
+nvm alias tag 版本号
+
+#取消别名
+nvm alias tag
+
+#设置默认版本
+nvm alias default tag\版本号
 
 #换源
 npm config set registry https://registry.npm.taobao.org
@@ -411,7 +425,7 @@ sudo apt install obs-studio
 
 ```shell
 #安装
-sudo apt install mysql-server
+sudo apt install mysql-server=5.7* mysql-client=5.7*
 
 #查看服务
 systemctl status mysql.service
@@ -421,7 +435,11 @@ sudo mysql_secure_installation
 
 sudo mysql
 
-use mysql;
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'my-secret-password';
+
+sudo mysql_secure_installation
+
+
 
 //此处设置一个复杂的密码，然后退出
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'Root_12root';

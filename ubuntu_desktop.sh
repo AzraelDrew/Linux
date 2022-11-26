@@ -13,5 +13,6 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted 
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse" > /etc/apt/sources.list;
 sudo apt update;
 sudo add-apt-repository ppa:apandada1/brightness-controller ;
-sudo apt install vim wget curl telegram-desktop gnome-sushi gnome-tweak-tool flameshot vlc grub-customizer scrcpy samba sl cmatrix brightness-controller-simple ;
+sudo apt install python3 python3-pip  vim wget curl telegram-desktop gnome-sushi gnome-tweak-tool flameshot vlc grub-customizer scrcpy samba sl cmatrix brightness-controller-simple;
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple;
 sudo echo "set completion-ignore-case on" >>  /etc/inputrc;
