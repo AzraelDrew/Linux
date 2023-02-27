@@ -425,26 +425,14 @@ sudo apt install obs-studio
 
 ```shell
 #安装
-sudo apt install mysql-server=5.7* mysql-client=5.7*
+sudo apt install mysql-server=5.7* mysql-client=5.7* libmysqlclient-dev;
 
 #查看服务
 systemctl status mysql.service
 
-#配置mysql
-sudo mysql_secure_installation
 
 sudo mysql
 
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'my-secret-password';
-
-sudo mysql_secure_installation
-
-
-
-//此处设置一个复杂的密码，然后退出
-ALTER USER 'root'@'localhost' IDENTIFIED BY 'Root_12root';
-
-mysql -uroot -p  //输入Root_12root
 
 #密码规则  每次设置密码时都要使用
 set global validate_password.length=1;
